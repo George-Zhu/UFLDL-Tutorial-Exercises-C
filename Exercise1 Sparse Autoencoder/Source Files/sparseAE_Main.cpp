@@ -81,7 +81,7 @@ int main()
 	}
 	MatrixXd feature(netParam.visibleSize, netParam.hiddenSize);
 	feature = w1.transpose();
-    displayNetwork(feature);
+        displayNetwork(feature);
 	waitKey(0);
 
 	//Free Memory
