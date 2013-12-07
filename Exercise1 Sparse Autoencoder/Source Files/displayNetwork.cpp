@@ -11,10 +11,9 @@ using namespace Eigen::Architecture;
 
 void displayNetwork(MatrixXd feature)
 {
-	
- 	int nrow = feature.rows();
+	int nrow = feature.rows();
  	int ncol = feature.cols();
-	int sz = (int)( std::sqrt((double)(nrow)) );
+ 	int sz = (int)( std::sqrt((double)(nrow)) );
  	int n = (int)( std::sqrt((double)(ncol)) );
  	MatrixXd network(1+(sz+1)*n, 1+(sz+1)*n);
  	network = MatrixXd::Zero(1+(sz+1)*n, 1+(sz+1)*n);
