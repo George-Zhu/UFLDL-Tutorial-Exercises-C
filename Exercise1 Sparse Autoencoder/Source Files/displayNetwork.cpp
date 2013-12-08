@@ -21,12 +21,12 @@ void displayNetwork(MatrixXd feature)
     feature = feature.array() - feature.mean();
     for (int i=0; i<ncol; i++)
     {
-    	for (int j=0; j<nrow; j++)
-    	{
+        for (int j=0; j<nrow; j++)
+        {
             temp.data()[j] = feature(j, i);
         }
 
-	network.block(1+(sz+1)*(i/n), 1+(sz+1)*(i%n), sz, sz) 
+    network.block(1+(sz+1)*(i/n), 1+(sz+1)*(i%n), sz, sz) 
                       = (temp.array() - feature.col(i).minCoeff())
                         / (feature.col(i).maxCoeff()-feature.col(i).minCoeff());
     }
