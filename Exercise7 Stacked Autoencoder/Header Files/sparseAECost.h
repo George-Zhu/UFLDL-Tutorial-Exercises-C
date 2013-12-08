@@ -12,19 +12,19 @@ using namespace Eigen::Architecture;
 
 struct instanceSP
 {
-	int visibleSize;
-	int hiddenSize;
-	double lambda;
-	double sparsityParam;
-	double beta;
-	MatrixXd& data;
+    int visibleSize;
+    int hiddenSize;
+    double lambda;
+    double sparsityParam;
+    double beta;
+    MatrixXd& data;
 };
 
 lbfgsfloatval_t sparseAECost(
-	void *instance,
-	const lbfgsfloatval_t *x,
-	lbfgsfloatval_t *g,
-	const int n,
-	const lbfgsfloatval_t step);
+    void *instance,
+    const lbfgsfloatval_t *x,
+    lbfgsfloatval_t *g,
+    const int n,
+    const lbfgsfloatval_t step);
 
 #endif

@@ -12,18 +12,18 @@ using namespace Eigen::Architecture;
 
 struct instanceSF
 {
-	int inputSize;
-	int numClass;
-	double lambda;
-	MatrixXd& label;
-	MatrixXd& data;
+    int inputSize;
+    int numClass;
+    double lambda;
+    MatrixXd& label;
+    MatrixXd& data;
 };
 
 lbfgsfloatval_t softmaxCost(
-	void* netParam,
-	const lbfgsfloatval_t *ptheta,
-	lbfgsfloatval_t *grad,
-	const int ntheta,
-	const lbfgsfloatval_t step);
+    void* netParam,
+    const lbfgsfloatval_t *ptheta,
+    lbfgsfloatval_t *grad,
+    const int ntheta,
+    const lbfgsfloatval_t step);
 
 #endif

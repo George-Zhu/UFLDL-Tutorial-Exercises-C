@@ -10,10 +10,10 @@ using namespace Eigen::internal;
 using namespace Eigen::Architecture;
 
 MatrixXd feedForwardAE(
-	double* theta, 
-	int visibleSize, 
-	int hiddenSize, 
-	const MatrixXd& data);
+    double* theta, 
+    int visibleSize, 
+    int hiddenSize, 
+    const MatrixXd& data);
 
 
 #endif

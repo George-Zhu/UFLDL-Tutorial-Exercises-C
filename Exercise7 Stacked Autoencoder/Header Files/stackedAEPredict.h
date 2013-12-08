@@ -10,10 +10,10 @@ using namespace Eigen::internal;
 using namespace Eigen::Architecture; 
 
 MatrixXd stackedAEPredict(
-	double* theta, 
-	int numLayer, 
-	int*layerSize, 
-	int numClass, 
-	MatrixXd& data);
+    double* theta, 
+    int numLayer, 
+    int*layerSize, 
+    int numClass, 
+    MatrixXd& data);
 
 #endif

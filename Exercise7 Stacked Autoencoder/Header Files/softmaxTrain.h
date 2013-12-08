@@ -12,11 +12,11 @@ using namespace Eigen::Architecture;
 
 
 double* softmaxTrain(
-	int inputSize, 
-	int numClass, 
-	double lambda, 
-	int maxIter,
-	MatrixXd& data, 
+    int inputSize, 
+    int numClass, 
+    double lambda, 
+    int maxIter,
+    MatrixXd& data, 
     MatrixXd& label);
 
 #endif
