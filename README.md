@@ -5,4 +5,4 @@ UFLDL-Tutorial-Exersices
 
 矩阵运算使用了eigen3，L-BFGS优化使用了libLBFGS( https://github.com/chokkan/liblbfgs )， 显示feature map 时调用了opencv，程序调用的数据都源自于.mat文件。我是在64位系统上运行的，Project Properties 里提供了工程属性配置文件，仅供参考。log.txt和Weight Map.jpg是运行结果。
 
-实际运行速度对比matlab实现慢了一倍多（两者代码中矩阵运算并行度是一样的）==|||，具体是libLBFGS还是eigen3的原因暂未测试。
+stacked autodecoder的实际运行速度对比matlab实现慢了两倍多（两者代码中矩阵运算并行度是一样的）==|||，具体是libLBFGS还是eigen3的原因暂未测试。
