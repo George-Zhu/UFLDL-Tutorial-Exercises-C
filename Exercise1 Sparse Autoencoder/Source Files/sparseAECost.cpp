@@ -61,14 +61,14 @@ lbfgsfloatval_t sparseAECost(
     VectorXd rho = a2.rowwise().sum() / ndata;
     VectorXd sparsityDelta = -sp / rho.array() + (1 - sp) / (1 - rho.array());
 
-        MatrixXd delta3 = (a3 - data).array() * sigmoidGrad(z3).array();
-        MatrixXd delta2 = (w2.transpose() * delta3 + beta * sparsityDelta.replicate(1, ndata)).array() 
+    MatrixXd delta3 = (a3 - data).array() * sigmoidGrad(z3).array();
+    MatrixXd delta2 = (w2.transpose() * delta3 + beta * sparsityDelta.replicate(1, ndata)).array() 
                       * sigmoidGrad(z2).array();
 
     MatrixXd w1Grad = delta2 * data.transpose() / ndata + lambda * w1;
     VectorXd b1Grad = delta2.rowwise().sum() / ndata;
     MatrixXd w2Grad = delta3 * a2.transpose() / ndata + lambda * w2;
-        VectorXd b2Grad = delta3.rowwise().sum() / ndata;
+    VectorXd b2Grad = delta3.rowwise().sum() / ndata;
 
     cost = (0.5 * (a3 - data).array().pow(2)).matrix().sum() / ndata
             + 0.5 * lambda * ((w1.array().pow(2)).matrix().sum() 
